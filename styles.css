@@ -1,0 +1,16 @@
+body {
+  overflow: hidden;
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(91, 91, 91);
+  width: 960px;
+  height: 960px;
+}
