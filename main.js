@@ -28,6 +28,7 @@ let createRows = (n) => {
 
 const createGrid = (n) => {
   // Creates n rows in the grid
+  gridContainer.innerHTML = ""
   if (n < 100) {
     for (let i = 0; i < n; i++) {
       createRows(n)
@@ -39,5 +40,18 @@ const createGrid = (n) => {
   }
 }
 
-let input = prompt("Enter grid dimension")
-createGrid(input)
+const body = document.querySelector("body")
+
+
+body.addEventListener("mouseover", (e) => {
+  if (e.target.className === "cell") {
+    e.target.style.backgroundColor = "Black"
+  }
+})
+
+const btn = document.querySelector("button")
+
+btn.addEventListener("click", () => {
+  let input = +(prompt("Enter grid dimension"))
+  createGrid(input)
+})
